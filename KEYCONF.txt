@@ -1,0 +1,10 @@
+addplayerclass "Duke64Player"
+
+//addslotdefault 0 "Mighty Boot 64"
+addslotdefault 1 "Colt M1911"
+//addslotdefault 2 "SPAS-12"
+//addslotdefault 3 "Grenade Launcher"
+//addslotdefault 4 "Dual MP5Ks"
+//addslotdefault 5 "Missile Launcher"
+//addslotdefault 6 "Expander"
+//addslotdefault 7 "Plasma Cannon"

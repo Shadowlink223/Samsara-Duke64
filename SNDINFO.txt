@@ -1,0 +1,25 @@
+////////////////
+// Duke 64 sounds
+//////////////
+
+$playersound	Duke64Player	male	*death			d6death
+$playersound	Duke64Player	male	*crazydeath		dkcrzdth
+$playersounddup	Duke64Player	male	*xdeath			*crazydeath
+$playersound	Duke64Player	male	*burndeath		dkburn
+$playersound	Duke64Player	male	*gibbed			d6gib
+$playersound	Duke64Player	male	*splat			dkcrater
+$playersound	Duke64Player	male	*falling		d6fallin
+$playeralias	Duke64Player	male	*pain100		duke/pain100
+$playeralias	Duke64Player	male	*pain75			duke/pain75
+$playeralias	Duke64Player	male	*pain50			duke/pain50
+$playeralias	Duke64Player	male	*pain25			duke/pain25
+$playersound	Duke64Player	male	*grunt			dkland02
+$playeralias	Duke64Player	male	*usefail		duke/usefail
+$playersound	Duke64Player	male	*puzzfail		dkpuzz
+$playersound	Duke64Player	male	*land			dkland00
+$playeralias	Duke64Player	male	*taunt			duke/singing
+$playersound	Duke64Player	male	*surface		dksurfac
+$playersound	Duke64Player	male	*gasp			dkgasp
+
+duke64/wepselect	d6wepse
+duke64/m1911		d6m1911
