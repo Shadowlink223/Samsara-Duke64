@@ -509,11 +509,11 @@ script "PistolStart" ENTER
 			TakeInventory("DukePortNiVi", 999);
 			TakeInventory("DukeNightVision", 999);
 			TakeInventory("SPAS-12", 999);
-			//TakeInventory("Hawk MM-1", 999);
-			//TakeInventory("Dual MP5Ks", 999);
+			TakeInventory("Hawk MM-1", 999);
+			TakeInventory("Dual MP5Ks", 999);
 			TakeInventory("Missile Launcher", 999);
-			//TakeInventory("Expander", 999);
-			//TakeInventory("Plasma Cannon", 999);
+			TakeInventory("Expander", 999);
+			TakeInventory("Plasma Cannon", 999);
 			
 			GiveInventory("Browning Hi-Power", 1);
 			GiveInventory("Mighty Boot", 1);

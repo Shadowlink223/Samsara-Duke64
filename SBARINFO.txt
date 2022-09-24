@@ -9,8 +9,8 @@ StatusBar Fullscreen, ForceScaled
 	{
 		DrawImage "D6HUD3", 0, 170;
 		DrawImage "D6HUD4", 245, 170;
-		DrawNumber 3, DN64HUDF, Gold, Health, 27, 182, Red, 25, White, 50;
-		DrawNumber 3, DN64HUDF, White, Armor, 27, 190;
+		DrawNumber 3, DN64HUDF, Untranslated, Health, 25, 182, Red, 25, Untranslated, 50;
+		DrawNumber 3, DN64HUDF, Untranslated, Armor, 25, 190;
 			IsSelected " Pipebombs "
 			{
 				DrawImage "AMSMC0", 53, 186, Center;
@@ -27,8 +27,8 @@ StatusBar Fullscreen, ForceScaled
 				InInventory AltAmmoSet, 1
 				{
 					DrawImage "AMSMK0", 53, 186, Center;
-					DrawNumber 3, INDEXFON, White, DumDums, 57, 192;
-					DrawNumber 3, INDEXFON, White, Ammo1, 60, 184;
+					DrawNumber 3, INDEXFON, Gold, DumDums, 57, 192;
+					DrawNumber 3, INDEXFON, Gold, Ammo1, 60, 184;
 				}
 			}
 			IsSelected "SPAS-12"
@@ -41,7 +41,7 @@ StatusBar Fullscreen, ForceScaled
 				InInventory UsingExplosiveShells, 1
 				{
 					DrawImage AmmoIcon2, 53, 186, Center;
-					DrawNumber 3, INDEXFON, White, ExplosiveShells, 60, 184;
+					DrawNumber 3, INDEXFON, Gold, ExplosiveShells, 60, 184;
 				}
 			}
 			IsSelected "Hawk MM-1"
@@ -64,7 +64,7 @@ StatusBar Fullscreen, ForceScaled
 				InInventory UsingHeatSeeking, 1
 				{
 					DrawImage AmmoIcon2, 53, 186, Center;
-					DrawNumber 3, INDEXFON, White, HeatSeekingRockets, 60, 184;
+					DrawNumber 3, INDEXFON, Gold, HeatSeekingRockets, 60, 184;
 				}
 			}
 			IsSelected "Expander"
@@ -1945,17 +1945,17 @@ IsSelected not "Spnkr-25 Auto Cannon"
 	playerclass Duke64
     {
         drawimage "DN64BAR", 0, 168;
-        drawnumber 3, DN64HUDF, gold, ammo1, 50, 183, 0, untranslated, 0, untranslated, 20;
-        drawnumber 3, DN64HUDF, gold, health, 85, 183, white, 25, untranslated, 50;
-        drawnumber 3, DN64HUDF, gold, armor, 205, 183, 0, untranslated, 0, untranslated, 50;
+        drawnumber 3, DN64HUDF, untranslated, ammo1, 53, 181, 0, untranslated, 0, untranslated, 20;
+        drawnumber 3, DN64HUDF, untranslated, health, 85, 181, red, 25, untranslated, 50;
+        drawnumber 3, DN64HUDF, untranslated, armor, 202, 181, 0, untranslated, 0, untranslated, 50;
 
         //Doom keys
-        InInventory BlueCard, 1 { drawimage "STKEYS0", 226, 175; }
-        InInventory YellowCard, 1 { drawimage "STKEYS1", 238, 175; }
-        InInventory RedCard, 1 { drawimage "STKEYS2", 250, 175; }
-        InInventory BlueSkull, 1 { drawimage "STKEYS3", 226, 186; }
-        InInventory YellowSkull, 1 { drawimage "STKEYS4", 238, 186; }
-        InInventory RedSkull, 1 { drawimage "STKEYS5", 250, 186; }
+        InInventory BlueCard, 1 { drawimage "D6HUDB", 271, 173; }
+		InInventory YellowCard, 1 { drawimage "D6HUDY", 275, 180; }
+		InInventory RedCard, 1 { drawimage "D6HUDR", 276, 188; }
+		InInventory BlueSkull, 1 { drawimage "D6HUDB", 271, 173; }
+		InInventory YellowSkull, 1 { drawimage "D6HUDY", 275, 180; }
+		InInventory RedSkull, 1 { drawimage "D6HUDR", 276, 188; }
         //Chex keys
         InInventory ChexBlueCard, 1 { drawimage "STKEYS0", 222, 175; }
         InInventory ChexYellowCard, 1 { drawimage "STKEYS1", 235, 175; }
@@ -2004,21 +2004,27 @@ IsSelected not "Spnkr-25 Auto Cannon"
         InInventory MaulerKey, 1 { drawimage "STRIKEYM", 243, 192; }
         InInventory FactoryKey, 1 { drawimage "STRIKEYN", 249, 192; }
         InInventory MineKey, 1 { drawimage "STRIKEYO", 256, 192; }
+//Temporatily commenting out		
+		/*InInventory AltAmmoSet, 1 { drawnumber 3, INDEXFON, gold, ammo DumDums, 289, 174; }
+		InInventory not AltAmmoSet, 1 { drawnumber 3, INDEXFON, white, ammo Clip, 289, 174; }
+		InInventory UsingExplosiveShells, 1 { drawnumber 3, INDEXFON, gold, ammo ExplosiveShells, 289, 180; }
+        InInventory not UsingExplosiveShells, 1 { drawnumber 3, INDEXFON, white, ammo Shell, 289, 180; }
+		InInventory UsingHeatSeeking, 1 { drawnumber 3, INDEXFON, gold, ammo HeatSeekingRockets, 289, 186; }
+        InInventory not UsingHeatSeeking, 1 { drawnumber 3, INDEXFON, white, ammo RocketAmmo, 289, 186; }
+         drawnumber 3, INDEXFON, white, ammo Cell, 289, 192;
 
-        drawnumber 3, INDEXFON, green, ammo Clip, 289, 174;
-         drawnumber 3, INDEXFON, green, ammo Shell, 289, 180;
-         drawnumber 3, INDEXFON, green, ammo RocketAmmo, 289, 186;
-         drawnumber 3, INDEXFON, green, ammo Cell, 289, 192;
-
-         drawnumber 3, INDEXFON, green, ammocapacity Clip, 315, 174;
-         drawnumber 3, INDEXFON, green, ammocapacity Shell, 315, 180;
-         drawnumber 3, INDEXFON, green, ammocapacity RocketAmmo, 315, 186;
-         drawnumber 3, INDEXFON, green, ammocapacity Cell, 315, 192;
+		InInventory AltAmmoSet, 1 { drawnumber 3, INDEXFON, gold, ammocapacity DumDums, 315, 174; }
+        InInventory not AltAmmoSet, 1 { drawnumber 3, INDEXFON, white, ammocapacity Clip, 315, 174; }
+		InInventory UsingExplosiveShells, 1 { drawnumber 3, INDEXFON, gold, ammocapacity ExplosiveShells, 315, 180; }
+        InInventory not UsingExplosiveShells, 1 { drawnumber 3, INDEXFON, white, ammocapacity Shell, 315, 180; }
+		InInventory UsingHeatSeeking, 1 { drawnumber 3, INDEXFON, gold, ammocapacity HeatSeekingRockets, 315, 186; }
+        InInventory not UsingHeatSeeking, 1 { drawnumber 3, INDEXFON, white, ammocapacity RocketAmmo, 315, 186; }
+         drawnumber 3, INDEXFON, white, ammocapacity Cell, 315, 192;*/
          InInventory not ChickenModeOn, 1 {
         gamemode deathmatch, teamplay, teamgame, OneFlagCTF, CTF, Skulltag, TeamLMS, TeamPossession { drawnumber 3, DUKEHUDF, untranslated, frags, 133, 183; }
         gamemode cooperative, singleplayer
         {
-            drawnumber 3, DN64HUDF, untranslated, KillCountAmount, 133, 183;
+            drawnumber 3, DN64HUDF, untranslated, KillCountAmount, 131, 181;
             InInventory KillCountNotch, 1 { drawimage "DUKENTCH", 107, 169; }
             InInventory KillCountNotch, 2 { drawimage "DUKENTCH", 111, 169; }
             InInventory KillCountNotch, 3 { drawimage "DUKENTCH", 115, 169; }
