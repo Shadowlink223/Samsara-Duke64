@@ -29,6 +29,18 @@ actor Archvile2 : Archvile replaces Archvile
         TNT1 A 0 ACS_ExecuteAlways(SAMSARA_CLIENT_DECORATE,0,11)
         goto "Super::Death"
 		
+		Death.DukePlasma:
+		TNT1 A 0 A_GiveToTarget("Killcount",1)
+		TNT1 A 0 A_Stop
+		VILE G 1 A_NoBlocking
+		TNT1 A 0 ACS_NamedExecuteAlways("DN64PlasmaDeath")
+		VILE G 3 A_SpawnItem("PlasmaEffectSmall")
+		TNT1 A 0 A_GiveInventory("EnemyZorched",1)
+		VILE G 27 A_Scream
+		TNT1 A 1 A_SetTranslucent(1,0)
+        TNT1 A -1
+		Stop
+		
       /*Death.DukePlasma:
         TNT1 A 0 A_GiveToTarget("KillCount",1)
         VILE G 0 A_Stop

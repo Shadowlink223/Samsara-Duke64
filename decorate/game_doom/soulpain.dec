@@ -27,6 +27,18 @@ actor LostSoul2 : LostSoul replaces LostSoul
         TNT1 A 0 A_GiveToTarget("KillCount",1)
         goto "Super::Death"
 		
+	  Death.DukePlasma:
+		TNT1 A 0 A_GiveToTarget("Killcount",1)
+		TNT1 A 0 A_Stop
+		SKUL C 1 A_NoBlocking
+		TNT1 A 0 ACS_NamedExecuteAlways("DN64PlasmaDeath")
+		SKUL C 3 A_SpawnItem("PlasmaEffectSmall")
+		TNT1 A 0 A_GiveInventory("EnemyZorched",1)
+		SKUL C 27 A_Scream
+		TNT1 A 1 A_SetTranslucent(1,0)
+        TNT1 A -1
+		Stop
+		
 	  /*Death.DukePlasma:
         TNT1 A 0 A_GiveToTarget("KillCount",1)
         SKUL C 0 A_Stop
@@ -121,6 +133,18 @@ actor PainElemental2 : PainElemental replaces PainElemental
         TNT1 A 0 A_GiveToTarget("KillCount",1)
         TNT1 A 0 ACS_ExecuteAlways(SAMSARA_CLIENT_DECORATE,0,11)
         goto "Super::Death"
+		
+	  Death.DukePlasma:
+		TNT1 A 0 A_GiveToTarget("Killcount",1)
+		TNT1 A 0 A_Stop
+		PAIN E 1 A_NoBlocking
+		TNT1 A 0 ACS_NamedExecuteAlways("DN64PlasmaDeath")
+		PAIN E 3 A_SpawnItem("PlasmaEffectSmall")
+		TNT1 A 0 A_GiveInventory("EnemyZorched",1)
+		PAIN E 27 A_Scream
+		TNT1 A 1 A_SetTranslucent(1,0)
+        TNT1 A -1
+		Stop
 		
 	  /*Death.DukePlasma:
         TNT1 A 0 A_GiveToTarget("KillCount",1)

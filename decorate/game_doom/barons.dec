@@ -35,6 +35,18 @@ actor BaronOfHell2 : BaronOfHell replaces BaronOfHell
         TNT1 A 0 A_GiveToTarget("KillCount",1)
         TNT1 A 0 ACS_ExecuteAlways(SAMSARA_CLIENT_DECORATE,0,11)
         goto "Super::Death"
+		
+		Death.DukePlasma:
+		TNT1 A 0 A_GiveToTarget("Killcount",1)
+		TNT1 A 0 A_Stop
+		BOSS E 1 A_NoBlocking
+		TNT1 A 0 ACS_NamedExecuteAlways("DN64PlasmaDeath")
+		BOSS E 3 A_SpawnItem("PlasmaEffectSmall")
+		TNT1 A 0 A_GiveInventory("EnemyZorched",1)
+		BOSS E 27 A_Scream
+		TNT1 A 1 A_SetTranslucent(1,0)
+        TNT1 A -1 A_KillMaster
+		Stop
 	
 	  /*Death.DukePlasma:
         TNT1 A 0 A_GiveToTarget("KillCount",1)
@@ -250,6 +262,18 @@ actor Hellknight2 : Hellknight replaces Hellknight
         TNT1 A 0 A_GiveToTarget("KillCount",1)
         TNT1 A 0 ACS_ExecuteAlways(SAMSARA_CLIENT_DECORATE,0,11)
         goto "Super::Death"
+		
+	  Death.DukePlasma:
+		TNT1 A 0 A_GiveToTarget("Killcount",1)
+		TNT1 A 0 A_Stop
+		BOS2 E 1 A_NoBlocking
+		TNT1 A 0 ACS_NamedExecuteAlways("DN64PlasmaDeath")
+		BOS2 E 3 A_SpawnItem("PlasmaEffectSmall")
+		TNT1 A 0 A_GiveInventory("EnemyZorched",1)
+		BOS2 E 27 A_Scream
+		TNT1 A 1 A_SetTranslucent(1,0)
+        TNT1 A -1 A_KillMaster
+		Stop
 		
 	  /*Death.DukePlasma:
         TNT1 A 0 A_GiveToTarget("KillCount",1)
