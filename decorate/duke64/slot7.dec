@@ -131,7 +131,8 @@ actor "Plasma Cannon" : Weapon
 			TNT1 A 0 A_JumpIfInventory("HoldFlash",1,"Flash")
 			Stop
 		Hold:
-			TNT1 A 0 A_JumpIfInventory("PlasmaCharge",150,"HoldSound")
+			TNT1 A 0 A_JumpIfInventory("PlasmaSound",151,2)
+			TNT1 A 0 A_JumpIfInventory("PlasmaSound",150,"HoldSound")
 			TNT1 A 0 A_JumpIfInventory("PlasmaCharge",42,"HoldMax")
 			TNT1 A 0 A_JumpIfInventory("PlasmaCharge",40,"Hold36")
 			TNT1 A 0 A_JumpIfInventory("PlasmaCharge",38,"Hold35")
@@ -673,6 +674,7 @@ actor "Plasma Cannon" : Weapon
 			Goto HoldContinued
 		HoldSound:
 			TNT1 A 0 A_PlaySound("duke64/plasmahold",CHAN_5,1.0,1)
+			Goto HoldContinued
 		HoldMax:
 			TNT1 A 0 A_Jump(256,"HoldMax_1","HoldMax_2","HoldMax_3","HoldMax_4")
 		HoldMax_1:
@@ -688,6 +690,7 @@ actor "Plasma Cannon" : Weapon
 			PB37 D 1 bright A_GiveInventory("PlasmaCharge",1)
 			Goto HoldContinued
 		HoldContinued:
+			TNT1 A 0 A_GiveInventory("PlasmaSound",1)
 			TNT1 A 0 A_ReFire
 			TNT1 A 0 A_JumpIfInventory("PlasmaCharge",112,"FireMax")
 			TNT1 A 0 A_JumpIfInventory("PlasmaCharge",109,"Fire32")
@@ -896,6 +899,7 @@ actor "Plasma Cannon" : Weapon
 			TNT1 A 0 A_StopSound(5)
 			TNT1 A 0 A_AlertMonsters
 			TNT1 A 0 A_TakeInventory("PlasmaCharge",0)
+			TNT1 A 0 A_TakeInventory("PlasmaSound",0)
 			TNT1 A 0 A_TakeInventory("HoldFlash",1)
 			TNT1 A 0 A_ReFire
 			Goto Ready
@@ -1537,3 +1541,4 @@ ACTOR PlasmaChargedFlash : CustomInventory
 }
 
 Actor PlasmaCharge : Inventory { Inventory.MaxAmount 150 }
+Actor PlasmaSound : Inventory { Inventory.MaxAmount 151 }
